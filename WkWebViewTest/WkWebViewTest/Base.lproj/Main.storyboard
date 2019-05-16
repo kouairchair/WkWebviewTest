@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WkWebViewTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SbR-cN-1se">
+                                <rect key="frame" x="83" y="172" width="240" height="128"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="198">
+                                <rect key="frame" x="83" y="359" width="209" height="128"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="205"/>
+                                </constraints>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="198" secondAttribute="bottom" constant="180" id="201"/>
+                            <constraint firstItem="198" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="67" id="202"/>
+                            <constraint firstItem="198" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="203"/>
+                            <constraint firstItem="SbR-cN-1se" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="67" id="9Xc-Y3-foM"/>
+                            <constraint firstItem="198" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="67" id="Dtb-CM-JAj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="SbR-cN-1se" secondAttribute="trailing" constant="36" id="LKb-US-cox"/>
+                            <constraint firstItem="SbR-cN-1se" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="152" id="QlC-Jp-XzO"/>
+                            <constraint firstItem="198" firstAttribute="top" secondItem="SbR-cN-1se" secondAttribute="bottom" constant="59" id="RUD-1M-Fug"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="198" secondAttribute="bottom" constant="180" id="RhW-mP-DSw"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="198" secondAttribute="trailing" constant="67" id="pSK-pJ-1UH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="UITestWebView" destination="SbR-cN-1se" id="S1e-NT-zKK"/>
+                        <outlet property="WKTestWebView" destination="198" id="ywY-kz-Qrt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+    </scenes>
+</document>
